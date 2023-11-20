@@ -1,0 +1,84 @@
+{% extends "base.html" %}{% block main %}
+<div class="container mt-5">
+    <h1 class="mb-4">Log Ingestion</h1>
+
+    <form id="logIngestForm">
+        <!-- Log Level -->
+        <div class="form-group">
+            <label for="level">Log Level:</label>
+            <select class="form-control" name="level" id="level">
+                    <option value="info">Info</option>
+                    <option value="warning">Warning</option>
+                    <option value="error">Error</option>
+                </select>
+        </div>
+
+        <!-- Log Message -->
+        <div class="form-group">
+            <label for="message">Log Message:</label>
+            <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
+        </div>
+
+        <!-- Resource ID -->
+        <div class="form-group">
+            <label for="resourceId">Resource ID:</label>
+            <input type="text" class="form-control" name="resourceId" id="resourceId" required>
+        </div>
+
+        <!-- Timestamp -->
+        <div class="form-group">
+            <label for="timestamp">Timestamp:</label>
+            <input type="datetime-local" class="form-control" name="timestamp" id="timestamp" required>
+        </div>
+
+        <!-- Trace ID -->
+        <div class="form-group">
+            <label for="traceId">Trace ID:</label>
+            <input type="text" class="form-control" name="traceId" id="traceId" required>
+        </div>
+
+        <!-- Span ID -->
+        <div class="form-group">
+            <label for="spanId">Span ID:</label>
+            <input type="text" class="form-control" name="spanId" id="spanId" required>
+        </div>
+
+        <!-- Commit -->
+        <div class="form-group">
+            <label for="commit">Commit:</label>
+            <input type="text" class="form-control" name="commit" id="commit" required>
+        </div>
+
+        <!-- Parent Resource ID -->
+        <div class="form-group">
+            <label for="parentResourceId">Parent Resource ID:</label>
+            <input type="text" class="form-control" name="metadata.parentResourceId" id="parentResourceId" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="button" class="btn btn-primary" onclick="submitForm()">Ingest Log</button>
+
+    </form>
+
+</div>
+<script>
+    function submitForm() {
+        // Create a FormData object to collect form data
+        var formData = new FormData(document.getElementById('logIngestForm'));
+
+        // Use Fetch API to send the form data to the server
+        fetch('/ingest', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(formData))
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display success message or handle response as needed
+                alert(data.status);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>{% endblock %}

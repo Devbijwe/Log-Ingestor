@@ -1,0 +1,138 @@
+ {% extends "base.html" %}{% block main %}
+<!-- Sub Navbar for Filters -->
+<div class="container">
+    <form id="logSearchForm" action="{{ url_for('search_logs') }}" method="post">
+        <div class="row">
+            <!-- Log Level -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <select class="custom-select form-control form-control-sm " name="level" id="level">
+                            <option value="" selected>All</option>
+                            <option value="info">Info</option>
+                            <option value="warning">Warning</option>
+                            <option value="error">Error</option>
+                        </select>
+                    <label for="level">Log Level</label>
+                </div>
+            </div>
+
+            <!-- Message -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm " name="message" id="message">
+                    <label for="message">Message</label>
+                </div>
+            </div>
+
+            <!-- Resource ID -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm " name="resourceId" id="resourceId">
+                    <label for="resourceId">Resource ID</label>
+                </div>
+            </div>
+
+            <!-- Timestamp -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="date" class="form-control form-control-sm " name="start_date" id="start_date">
+                    <label for="start_date">Start Date</label>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="date" class="form-control form-control-sm " name="end_date" id="end_date">
+                    <label for="end_date">End Date</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Trace ID -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm " name="traceId" id="traceId">
+                    <label for="traceId">Trace ID</label>
+                </div>
+            </div>
+
+            <!-- Span ID -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm " name="spanId" id="spanId">
+                    <label for="spanId">Span ID</label>
+                </div>
+            </div>
+
+            <!-- Commit -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm " name="commit" id="commit">
+                    <label for="commit">Commit</label>
+                </div>
+            </div>
+
+            <!-- Parent Resource ID -->
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control form-control-sm " name="metadata.parentResourceId" id="metadata.parentResourceId">
+                    <label for="metadata.parentResourceId">Parent Resource ID</label>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="container mt-4">
+
+    {% if mongo_logs or mysql_logs %}
+    <h2 class="mt-4">Search Results</h2>
+    <!-- Display search results in a table -->
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th>Level</th>
+                <th>Message</th>
+                <th>Resource ID</th>
+                <th>Timestamp</th>
+                <th>Trace ID</th>
+                <th>Span ID</th>
+                <th>Commit</th>
+                <th>Parent Resource ID</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in mongo_logs %}
+            <tr style="background-color: {% if log.level == 'error' %}#ffb3b3{% elif log.level == 'warning' %}#ffe066{% else %}#c3e6cb{% endif %}">
+                <td>{{ log.level }}</td>
+                <td>{{ log.message }}</td>
+                <td>{{ log.resourceId }}</td>
+                <td>{{ log.timestamp }}</td>
+                <td>{{ log.traceId }}</td>
+                <td>{{ log.spanId }}</td>
+                <td>{{ log.commit }}</td>
+                <td>{{ log["metadata.parentResourceId"] }}</td>
+            </tr>
+            {% endfor %} {% for log in mysql_logs %}
+            <tr style="background-color: {% if log.level == 'error' %}#ffb3b3{% elif log.level == 'warning' %}#ffe066{% else %}#c3e6cb{% endif %}">
+                <td>{{ log.level }}</td>
+                <td>{{ log.message }}</td>
+                <td>{{ log.resourceId }}</td>
+                <td>{{ log.timestamp }}</td>
+                <td>{{ log.traceId }}</td>
+                <td>{{ log.spanId }}</td>
+                <td>{{ log.commit }}</td>
+                <td>{{ log.parentResourceId }}</td>
+
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% endif %}
+</div>{% endblock %}

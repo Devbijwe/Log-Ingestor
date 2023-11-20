@@ -1,0 +1,80 @@
+Error at 2023-11-19 22:48:23: time data '2023-11-19T22:46' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error at 2023-11-19 22:48:23: time data '2023-11-19T22:46' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error at 2023-11-19 22:48:41: time data '2023-11-19T22:46' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error at 2023-11-19 22:48:41: time data '2023-11-19T22:46' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error at 2023-11-19 22:49:42: time data '2023-11-19T22:46' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error at 2023-11-19 22:49:42: time data '2023-11-19T22:46' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error at 2023-11-19 23:17:18: time data '2023-11-19T23:16' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error at 2023-11-19 23:17:18: time data '2023-11-19T23:16' does not match format '%Y-%m-%dT%H:%M:%SZ'
+Error searching logs: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql 
+WHERE log_my_sql.message = %s]
+[parameters: ({'$regex': 'DB', '$options': 'i'},)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Error searching logs: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql 
+WHERE log_my_sql.message = %s]
+[parameters: ({'$regex': 'DB', '$options': 'i'},)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Error searching logs: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql 
+WHERE log_my_sql.message = %s]
+[parameters: ({'$regex': 'DB', '$options': 'i'},)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Error searching logs: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql 
+WHERE log_my_sql.message = %s]
+[parameters: ({'$regex': 'DB', '$options': 'i'},)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MongoDB Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MongoDB Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MySQL Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MySQL Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MongoDB Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MongoDB Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MySQL Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MySQL Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MongoDB Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MongoDB Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MySQL Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+MySQL Error: (MySQLdb.ProgrammingError) (1146, "Table 'log_database.log_my_sql' doesn't exist")
+[SQL: SELECT log_my_sql.id AS log_my_sql_id, log_my_sql.level AS log_my_sql_level, log_my_sql.message AS log_my_sql_message, log_my_sql.`resourceId` AS `log_my_sql_resourceId`, log_my_sql.timestamp AS log_my_sql_timestamp, log_my_sql.`traceId` AS `log_my_sql_traceId`, log_my_sql.`spanId` AS `log_my_sql_spanId`, log_my_sql.commit AS log_my_sql_commit, log_my_sql.`parentResourceId` AS `log_my_sql_parentResourceId` 
+FROM log_my_sql]
+(Background on this error at: https://sqlalche.me/e/20/f405)
