@@ -58,6 +58,8 @@
     <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light px-5">
         <a class="navbar-brand" href="{{url_for('home')}}">Log Ingestor</a>
+    <a class="nav-link" href="{{ url_for('ingest_log') }}">Ingest logs</a> <a class="nav-link" href="{{ url_for('search_logs') }}">Search</a>
+               
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
