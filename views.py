@@ -6,7 +6,7 @@ from models import *
 
 @app.route('/')
 def home():
-    return redirect(url_for("ingest_log"))
+    return redirect(url_for("search_logs"))
 
 @app.route('/ingest', methods=['GET', 'POST'])
 def ingest_log():
