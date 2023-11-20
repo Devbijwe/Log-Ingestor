@@ -105,13 +105,11 @@ python app.py
 
 - The app will be accessible at http://localhost:3000 in your web browser.
  
-## Usage
-
-  - Navigate to http://localhost:3000/ingest to submit log entries.
-  - Visit http://localhost:3000/search to search and filter logs.
+- Navigate to http://localhost:3000/ingest to submit log entries.
+- Visit http://localhost:3000/search to search and filter logs.
 
 
-# Identified Issues
+## Identified Issues
 
 1. **Error Handling Consistency:**
    - Error handling is present, but there is room for consistency improvement. Ensure that errors are consistently logged and handled across different components.
